@@ -1,0 +1,33 @@
+{
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "sqltools.connections": [
+        {
+            "connectionTimeout": 60,
+            "database": "exercicio",
+            "driver": "MySQL",
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "name": "MySQL-Real",
+            "password": "9eq3y%NhPG83o9fLZ%xL",
+            "port": 3306,
+            "previewLimit": 50,
+            "server": "localhost",
+            "username": "root"
+        },
+        {
+            "connectionTimeout": 60,
+            "database": "exercicio",
+            "driver": "MySQL",
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "name": "MySQL-Docker",
+            "password": "9eq3y%NhPG83o9fLZ%xL",
+            "port": 3306,
+            "previewLimit": 50,
+            "server": "172.17.239.161",
+            "username": "root"
+        }
+    ]
+}

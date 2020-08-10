@@ -1,0 +1,57 @@
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+table {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid black;
+    margin: 0px;
+    padding: 5px;
+    font-size: 120%;
+}
+
+h1,
+h2,
+h4 {
+    width: 100%;
+    font-size: 200%;
+    text-align: center;
+}
+
+.content {
+    margin: 0.5%;
+    font-size: 130%;
+    display: flex;
+    justify-content: center;
+}
+
+label {
+    width: 35%;
+}
+
+.button {
+    width: 100%;
+    padding: 3px;
+    text-align: center;
+}
+
+.button>input {
+    padding: 3px;
+    font-size: 130%;
+}
