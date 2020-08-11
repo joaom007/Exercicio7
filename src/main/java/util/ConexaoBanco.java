@@ -7,9 +7,9 @@ import com.mysql.cj.jdbc.MysqlDataSource;
 public class ConexaoBanco {
 
     private Connection conexao = null;
-    private final String HOST = "172.17.0.3";
-    private final String BANCO = "exercicio";
-    private final String LOGIN = "root";
+    private final String HOST = "localhost";
+    private final String BANCO = "exercicio_java";
+    private final String LOGIN = "gerencia";
     private final String SENHA = "9eq3y%NhPG83o9fLZ%xL";
     
 

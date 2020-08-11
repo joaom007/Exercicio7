@@ -4,4 +4,25 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+
+  <servlet>
+    <servlet-name>viewPessoaFisicaServlet</servlet-name>
+    <servlet-class>view.ViewPessoaFisica</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>viewPessoaJuridicaServlet</servlet-name>
+    <servlet-class>view.ViewPessoaJuridica</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>viewPessoaFisicaServlet</servlet-name>
+    <url-pattern>/pessoafisica</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>viewPessoaJuridicaServlet</servlet-name>
+    <url-pattern>/pessoajuridica</url-pattern>
+  </servlet-mapping>
+  
 </web-app>

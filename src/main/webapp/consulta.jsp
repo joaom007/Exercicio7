@@ -29,6 +29,8 @@
         
         //CONSULTA PESSOAS FISICAS
         out.println("<h1>Consulta de pessoas fisicas</h1>");
+        out.println("<h4>Para ver no formato JSON, <a href=\"pessoafisica\">clique aqui.</a></h4>");
+        
         try {
             FisicaDao fd = new FisicaDao();
 
@@ -65,6 +67,7 @@
 
         //CONSULTA PESSOAS JURIDICAS
         out.println("<h1>Consulta de pessoas juridicas</h1>");
+        out.println("<h4>Para ver no formato JSON, <a href=\"pessoajuridica\">clique aqui.</a></h4>");
         try {
             JuridicaDao jd = new JuridicaDao();
 
@@ -97,10 +100,7 @@
         } catch (SQLException e) {
             out.println("<p>Erro " + e.getMessage() + "</p>");
         }
-        out.println("</table>");
-        
-        
-        
+        out.println("</table>");  
     
     %>
 

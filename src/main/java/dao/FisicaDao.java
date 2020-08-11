@@ -51,7 +51,6 @@ public class FisicaDao {
         ResultSet rs = st.executeQuery();
         System.out.println("QUERY EXECUTADA"); 
               
-
         while (rs.next()) {
             PessoaFisica pfse = new PessoaFisica();
 
@@ -70,6 +69,5 @@ public class FisicaDao {
         }
 
         return lista;
-    }
-    
+    }    
 }

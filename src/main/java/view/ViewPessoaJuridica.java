@@ -12,29 +12,14 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.google.gson.Gson;
 
-import dao.FisicaDao;
-import model.PessoaFisica;
+import dao.JuridicaDao;
+import model.PessoaJuridica;
 
-public class ViewPessoaFisica extends HttpServlet{
-
+public class ViewPessoaJuridica extends HttpServlet {
+    
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         
-        /*
-        resp.setContentType("text/html");
-        resp.setCharacterEncoding("UTF-8");
-
-        PrintWriter saida = resp.getWriter();
-
-        saida.println("<html>");
-        saida.println("<body>");
-        saida.println("<p>Teste de Serverlet</p>");
-        saida.println("</body>");
-        saida.println("</html>");
-
-        saida.flush();
-        saida.close();
-        */
 
         resp.setContentType("application/json");
         resp.setCharacterEncoding("UTF-8");
@@ -43,33 +28,33 @@ public class ViewPessoaFisica extends HttpServlet{
 
         //CONSULTA PESSOAS FISICAS
         try {
-            FisicaDao fd = new FisicaDao();
+            JuridicaDao jd = new JuridicaDao();
 
-            List<PessoaFisica> lstPf = fd.pesquisarPF();             
+            List<PessoaJuridica> lstPj = jd.pesquisarPJ();             
             saida.println("[");
             int n = 0, i = 1;
             
-            for (PessoaFisica pfselect : lstPf) {
+            for (PessoaJuridica pjselect : lstPj) {
 
                 if(i==1) {
-                    n = lstPf.size();
+                    n = lstPj.size();
                     i = 2;
                 }
 
-                pfselect.getId();
-                pfselect.getNome();
-                pfselect.getEnd();
-                pfselect.getTel();
-                pfselect.getCep();
-                pfselect.getCPF();
-                pfselect.getNasc();
+                pjselect.getId();
+                pjselect.getNome();
+                pjselect.getEnd();
+                pjselect.getTel();
+                pjselect.getCep();
+                pjselect.getCNPJ();
+                pjselect.getRazaoSocial();
                 
-                String pessoaFisicaStr = new Gson().toJson(pfselect);
+                String pessoaJuridicaStr = new Gson().toJson(pjselect);
 
                 if(n == 1) {
-                    saida.printf(pessoaFisicaStr + "]");
+                    saida.printf(pessoaJuridicaStr + "]");
                 }else 
-                    saida.println(pessoaFisicaStr + ",");
+                    saida.println(pessoaJuridicaStr + ",");
                 n--;
             }
 
@@ -85,5 +70,4 @@ public class ViewPessoaFisica extends HttpServlet{
 
 
     }
-    
 }

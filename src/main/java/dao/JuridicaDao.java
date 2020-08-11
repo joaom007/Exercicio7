@@ -60,8 +60,10 @@ public class JuridicaDao {
             pjse.setEnd(rs.getString("endereco"));
             pjse.setTel(rs.getString("telefone"));
             pjse.setCep(rs.getString("cep"));
-            pjse.setCNPJ(rs.getString("cnpj"));
+            //pjse.setIdpj(rs.getInt("idpessoaJuridica"));
+            pjse.setCNPJ(rs.getString("CNPJ"));
             pjse.setRazaoSocial(rs.getString("razaoSocial"));
+            //pjse.setIdcli(rs.getInt("cliente_idcliente"));
 
             lista.add(pjse);
 
